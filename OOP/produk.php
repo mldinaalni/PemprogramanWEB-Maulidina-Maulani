@@ -1,0 +1,33 @@
+<?php
+
+//jualan produk
+class produk{
+    public $judul, 
+            $penulis,
+            $penerbit,
+            $harga; 
+
+            public function __construct ( $judul = "judul", $penulis = "penulis", $penerbit = "penerbit", $harga = 0) {
+
+            }
+
+
+           public funchion getLabel() {
+            return "$this->penulis, $this->penerbit";
+           }
+            
+
+}
+
+
+$produk1 = new produk("naruto", "masashi kishimoto", "shonen jump" 30000);
+$produk2 = new produk("uncharted", "neil druckmann", "sony computer", "250000");
+$produk3 = new produk("dragon ball");
+
+
+
+echo "komik : " .  $produk1->getLabel();
+echo "<br>";
+echo "game : " . $produk2->getLabel();
+echo"<br>;
+var_dump($produk3);
